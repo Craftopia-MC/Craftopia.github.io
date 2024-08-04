@@ -24,6 +24,33 @@
 
 
 <script src='js/func.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar la IP del servidor</title>
+    <style>
+        #copyButton {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="textToCopy" rows="4" cols="50">craftopiamc.online</textarea>
+    <button id="copyButton">Copiar la IP del servidor</button>
 
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const textArea = document.getElementById('textToCopy');
+            textArea.select();
+            document.execCommand('copy');
+            alert('Texto copiado al portapapeles!');
+        });
+    </script>
+}
+</script>
 </body>
 </html>
