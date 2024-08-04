@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Mediact Software - Downloads</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="css/button.css">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #525b56;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Mediact Software</h2>
+  <p>Software</p>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Support</a>
+  <a href="downloads.html">Downloads</a>
+</div>
+
+<div class="content">
+  <h3>Downloads</h3>
+  <p></p>
+  <button onclick="location.href='games.html'">Games</button>
+  <p></p>
+  <button onclick="location.href='software.html'">Software</button>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+var buttons = document.getElementsByTagName('button');
+
+Array.prototype.forEach.call(buttons, function (b) {
+    b.addEventListener('click', createRipple);
+});
+
+function createRipple (e) {
+    var circle = document.createElement('div');
+    this.appendChild(circle);
+
+    var d = Math.max(this.clientWidth, this.clientHeight);
+
+    circle.style.width = circle.style.height = d + 'px';
+
+var rect = this.getBoundingClientRect();
+circle.style.left = e.clientX - rect.left -d/2 + 'px';
+circle.style.top = e.clientY - rect.top - d/2 + 'px';
+
+    console.log(this);
+
+    circle.classList.add('ripple');
+}
+
+</script>
+
+</body>
+</html>
