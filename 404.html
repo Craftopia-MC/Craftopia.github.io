@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Pagina No Encontrada</title>
+    <title>404 - Página no encontrada</title>
     <style>
+        /* Estilo para el header */
+        h1 {
+            color: red; /* Cambia a cualquier color que prefieras */
+            font-size: 50px;
+            text-align: center;
+        }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
-        }
-        h1 {
-            font-size: 50px;
         }
         p {
             font-size: 20px;
@@ -24,9 +27,9 @@
 </head>
 <body>
     <h1>404</h1>
-    <p>Verifica si tienes un error de escritura en </p>
+    <p id="error-message"></p>
 
-        <script>
+    <script>
         // Captura la URL actual
         var paginaActual = window.location.href;
         
@@ -36,6 +39,5 @@
         // Inserta el mensaje en el párrafo con id 'error-message'
         document.getElementById('error-message').innerText = mensaje;
     </script>
-    <p><a href="/">Volver al index</a></p>
 </body>
 </html>
