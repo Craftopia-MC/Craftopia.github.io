@@ -25,6 +25,17 @@
 <body>
     <h1>404</h1>
     <p>Verifica si tienes un error de escritura en </p>
+
+        <script>
+        // Captura la URL actual
+        var paginaActual = window.location.href;
+        
+        // Crea el mensaje de error usando la URL capturada
+        var mensaje = `Verifica si tienes un error de escritura en ${paginaActual}.`;
+        
+        // Inserta el mensaje en el párrafo con id 'error-message'
+        document.getElementById('error-message').innerText = mensaje;
+    </script>
     <p><a href="/">Volver al index</a></p>
 </body>
 </html>
